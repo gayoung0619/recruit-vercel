@@ -11,7 +11,6 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import Arrow from "@/app/_components/icons/arrow";
 import {noticeInfo} from "@/app/_lib/notice";
-import Link from "next/link";
 export default function Main() {
   const [activeIndex, setActiveIndex] = useState(1);
   const [totalSlides, setTotalSlides] = useState(slideData.length);
@@ -74,33 +73,27 @@ export default function Main() {
                     <h1 className="f-heading">채용중인 공고</h1>
                     <div className="pt-[1.2500vw]">
                       <ul className="flex gap-2 mobile:grid mobile:grid-cols-2 mobile:max-w-[328px]">
-                        <Link href='/Apply/notice'>
-                          <li className="flex flex-col justify-between mobile:col-span-2 h-[10.8854vw] w-[12.1354vw] mobile:h-32 mobile:max-w-[160px] mobile:w-full bg-white/[.24] rounded p-[1.2500vw] mobile:p-[1rem]">
-                            <div className="flex justify-between items-center">
-                              <strong className="f-cnt_txt">신입채용</strong>
-                              <Arrow/>
-                            </div>
-                            <p className="text-right f-cnt_txt2">{newcomerItems.length}건</p>
-                          </li>
-                        </Link>
-                        <Link href='/Apply/notice'>
-                          <li className="flex flex-col justify-between h-[10.8854vw] w-[12.1354vw] mobile:h-32 mobile:max-w-[160px] mobile:w-full bg-white/[.24] rounded p-[1.2500vw] mobile:p-[1rem]">
-                            <div className="flex justify-between items-center">
-                              <strong className="f-cnt_txt">경력채용</strong>
-                              <Arrow/>
-                            </div>
-                            <p className="text-right f-cnt_txt2">{ExperiencedItems.length}건</p>
-                          </li>
-                        </Link>
-                        <Link href='/Apply/notice'>
-                          <li className="flex flex-col justify-between h-[10.8854vw] w-[12.1354vw] mobile:h-32 mobile:max-w-[160px] mobile:w-full bg-white/[.24] rounded p-[1.2500vw] mobile:p-[1rem]">
-                            <div className="flex justify-between items-center">
-                              <strong className="f-cnt_txt">어ㅗㄹ어로어로ㅓㅇ로얼</strong>
-                              <Arrow/>
-                            </div>
-                            <p className="text-right f-cnt_txt2">{internItems.length}건</p>
-                          </li>
-                        </Link>
+                        <li className="flex flex-col justify-between mobile:col-span-2 h-[10.8854vw] w-[12.1354vw] mobile:h-32 mobile:max-w-[160px] mobile:w-full bg-white/[.24] rounded p-[1.2500vw] mobile:p-[1rem]">
+                          <div className="flex justify-between items-center">
+                            <strong className="f-cnt_txt">신입채용</strong>
+                            <Arrow/>
+                          </div>
+                          <p className="text-right f-cnt_txt2">{newcomerItems.length}건</p>
+                        </li>
+                        <li className="flex flex-col justify-between h-[10.8854vw] w-[12.1354vw] mobile:h-32 mobile:max-w-[160px] mobile:w-full bg-white/[.24] rounded p-[1.2500vw] mobile:p-[1rem]">
+                          <div className="flex justify-between items-center">
+                            <strong className="f-cnt_txt">경력채용</strong>
+                            <Arrow/>
+                          </div>
+                          <p className="text-right f-cnt_txt2">{ExperiencedItems.length}건</p>
+                        </li>
+                        <li className="flex flex-col justify-between h-[10.8854vw] w-[12.1354vw] mobile:h-32 mobile:max-w-[160px] mobile:w-full bg-white/[.24] rounded p-[1.2500vw] mobile:p-[1rem]">
+                          <div className="flex justify-between items-center">
+                            <strong className="f-cnt_txt">인턴채용</strong>
+                            <Arrow/>
+                          </div>
+                          <p className="text-right f-cnt_txt2">{internItems.length}건</p>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -108,8 +101,7 @@ export default function Main() {
               </div>
             </SwiperSlide>
         ))}
-        <div
-            className="swiper-controller max-layout w-full flex gap-x-4 justify-end absolute left-[50%] translate-x-[-50%] bottom-[8.3333vw] z-10 mobile:max-w-[328px] mobile:p-0 mobile:left-[16px] mobile:translate-x-0 mobile:translate-y-0 mobile:gap-x-2">
+        <div className="swiper-controller max-layout w-full flex gap-x-4 justify-end absolute left-[50%] translate-x-[-50%] bottom-[8.3333vw] z-10 mobile:max-w-[328px] mobile:p-0 mobile:left-[16px] mobile:translate-x-0 mobile:translate-y-0 mobile:gap-x-2">
           <div className="swiper-pagination">
             <span></span>
             <span></span>

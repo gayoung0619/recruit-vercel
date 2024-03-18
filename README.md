@@ -9,7 +9,7 @@ npm run dev
 ```
 
 ## Chore
-> nodemailer
+> Redux-toolkit, ReactQuery, tailwindCSS
 
 ## Folder-Structure
 ```text
