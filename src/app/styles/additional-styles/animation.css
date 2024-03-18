@@ -1,0 +1,168 @@
+@tailwind utilities;
+/* header animation */
+header.header-bright {
+    color: #ffffff;
+    background: transparent;
+}
+header.header-bright svg path {
+    fill: #fff
+}
+header.header-bright .depth2 {
+    color: #000;
+}
+header.header-dark {
+    color: #ffffff;
+    background: rgba(0, 0, 0, .6);
+}
+header.header-dark svg path {
+    fill: #fff;
+}
+header.header-dark .after-element{
+    background: rgba(0, 0, 0, .6);
+}
+
+/* fade effect */
+.fade-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    opacity: 0;
+    border-radius: 50%;
+}
+
+.fade-in-1 {
+    width: 16.4063vw;
+    height: 16.4063vw;
+    animation: fade-in 1s ease-in-out 1s forwards;
+}
+.fade-in-2 {
+    width: 25.8854vw;
+    height: 25.8854vw;
+    animation: fade-in 1s ease-in-out 2s forwards;
+    transform: translate(-6.0417vw);
+}
+.fade-in-3 {
+    width: 36.4583vw;
+    height: 36.4583vw;
+    animation: fade-in 1s ease-in-out 3s forwards;
+    transform: translate(-12.0833vw);
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    75% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* tab animation */
+.tab-content.active {
+    animation: fadeUp 1s ease-in-out;
+}
+
+@keyframes fadeUp {
+    /* 애니메이션 키프레임 정의 */
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* typing animation */
+.typing {
+    white-space: nowrap;
+    margin: 0;
+    position: relative; /* Change to relative to position ::before relative to this element */
+    color: transparent;
+    text-align: center; /* Center the text */
+}
+
+.typing::before {
+    content: attr(data-content);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap; /* Ensure the text doesn't wrap */
+    color: #fff;
+    animation: typing 2s steps(15, end) forwards; /* Keep the final state after animation */
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+/* accordion animation */
+.accordion_btn {
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion_btn::before,
+.accordion_btn::after{
+    content: "";
+    position: absolute;
+    top: 2.0313vw;
+    left: -0.8333vw;
+    width: 0.9375vw;
+    height: 0.1042vw;
+    background-color: #2C6DFF;
+}
+@screen tablet {
+    .accordion_btn::before,
+    .accordion_btn::after {
+        top: 1.5625rem;
+        left: -0.375rem;
+        width: 0.875rem;
+        height: 0.125rem;
+    }
+}
+@screen mobile {
+    .accordion_btn::before,
+    .accordion_btn::after {
+        top: 1.5625rem;
+        left: -1.1875rem;
+    }
+}
+.accordion_btn::after {
+    transform: rotate(-90deg);
+    transition: transform 0.5s;
+}
+.accordion_btn.open::after {
+    transform: rotate(0deg);
+}
+.accordion_cnt {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.5s; /* Adjust the duration and easing as needed */
+}
+.accordion_cnt.open {
+    max-height: 1000px; /* Automatically adjust to content height */
+    opacity: 1;
+    transition: all 0.5s;
+}

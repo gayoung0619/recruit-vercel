@@ -1,0 +1,445 @@
+@tailwind utilities;
+:root {
+  --main-color: #2C6DFF; /* Your custom main color value */
+}
+
+/* custom the scrollbar */
+.scroll-custom {
+  overflow: auto;
+}
+.scroll-custom::-webkit-scrollbar {
+  height: 4px;
+}
+.scroll-custom::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.scroll-custom::-webkit-scrollbar-thumb {
+  background-color: #D1D4D6;
+  border-radius: 16px;
+}
+.scroll-custom::-webkit-scrollbar-button {
+  display: none;
+}
+
+.white-content .breadcrumb {
+  color: #6A6F75;
+}
+
+
+/* layout */
+.max-layout {
+  max-width: 83.75rem;
+  margin:  0 auto;
+  padding: 0 1.875rem;
+}
+
+.section-layout {
+  padding-top: 3.6979vw;
+  padding-bottom: 0.9896vw;
+}
+
+/* Typography */
+.f-header-title {
+  font-size: 1.0417vw;
+  line-height: 1.4583vw;
+}
+
+.f-header-text,
+.f-footer-text{
+  font-size: 1.0417vw;
+  line-height: 1.4583vw;
+}
+
+.f-footer-title {
+  font-size: 1.2500vw;
+  line-height: 1.5000vw;
+}
+
+.f-footer-strong {
+  font-size: 0.8333vw;
+  line-height: 1.3333vw;
+}
+
+.f-footer-text2 {
+  font-size: 0.7292vw;
+  line-height: 1.1667vw;
+}
+
+.f-72 {
+  font-size: 3.7500vw;
+  line-height: 4.8750vw;
+}
+
+.f-main-title {
+  font-size: 4.1667vw;
+  line-height: 5.4167vw;
+}
+
+.f-main-subtitle {
+  font-size: 1.2500vw;
+  line-height: 1.7500vw;
+}
+
+.f-heading,
+.f-heading-small{
+  font-size: 1.6667vw;
+  line-height: 2.3333vw;
+}
+
+.f-cnt_txt {
+  font-size: 1.2500vw;
+  line-height: 1.7500vw;
+}
+
+.f-cnt_txt2 {
+  font-size: 2.9167vw;
+  line-height: 3.7917vw;
+}
+
+.f-h1 {
+  font-size: 2.9167vw;
+  line-height: 3.7917vw;
+}
+
+.f-h2 {
+  font-size: 2.5000vw;
+  line-height: 3.2500vw;
+}
+
+.f-title2,
+.f-list,
+.f-list2{
+  font-size: 1.0417vw;
+  line-height: 1.6667vw;
+}
+
+.f-title {
+  font-size: 2.9167vw;
+  line-height: 3.7917vw;
+}
+
+.f-title1 {
+  font-size: 1.2500vw;
+  line-height: 2.0000vw;
+}
+
+.f-body {
+  font-size: 0.8333vw;
+  line-height: 1.3333vw;
+}
+
+.f-body2 {
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+}
+
+.f-caption {
+  font-size: 0.75rem;
+  line-height: 1.225rem;
+}
+
+address {
+  font-style: normal;
+}
+
+/* tab active */
+@layer utilities {
+  .tab.active {
+    @apply text-gray-800 font-medium border-b-2 border-main;
+  }
+}
+
+/* circle 가상요소 */
+@layer utilities {
+  .circle::before {
+    @apply block absolute rounded-full;
+    content: "";
+    background-color: var(--main-color);
+  }
+}
+
+@layer utilities {
+  .pseudo {
+    @apply relative;
+  }
+  .pseudo::before {
+    @apply block absolute;
+    content: "";
+  }
+}
+
+@layer utilities {
+  .list-pseudo {
+    @apply relative;
+  }
+  .list-pseudo::before {
+    content: "";
+    @apply block absolute rounded bg-gray-600;
+    width: 0.3646vw;
+    height: 0.3646vw;
+    left: 0.5208vw;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @screen mobile {
+    .list-pseudo::before {
+      width: 0.3125rem;
+      height: 0.3125rem;
+    }
+  }
+
+}
+
+/* title 스타일 */
+@layer utilities {
+  .title-circle {
+    @apply relative;
+    padding-left: 1.6667vw;
+  }
+
+  .title-circle::before {
+    width: 1.2500vw;
+    height: 1.2500vw;
+    left: 0;
+    bottom: 0.7813vw;
+  }
+
+  @screen mobile {
+    .title-circle {
+      padding-left: 1.25rem;
+    }
+
+    .title-circle::before {
+      width: 0.75rem;
+      height: 0.75rem;
+      bottom: 0.4375rem;
+    }
+  }
+}
+
+/* box 스타일 */
+@layer utilities {
+  .box-blur {
+    @apply rounded bg-white/[.24] backdrop-blur-md;
+  }
+}
+
+/* 말풍선 스타일 */
+@layer utilities {
+  .bubble {
+    @apply bg-gray-100 py-[1.3542vw] px-[1.6667vw] pseudo;
+    border-radius: 0.75rem;
+  }
+  .bubble::before {
+    @apply left-[-10px] top-[50%] translate-y-[-50%] w-[10px] h-[10px];
+    border: 5px solid transparent;
+    border-left-width: 0;
+    border-right-color: #F3F5F9;
+  }
+  @screen mobile {
+    .bubble {
+      @apply p-[1rem];
+      border-radius: 0.375rem;
+    }
+
+    .bubble::before {
+      @apply left-[16px] top-[-10px];
+      transform: rotate(90deg);
+    }
+  }
+}
+
+@screen tablet {
+  body {
+    font-size: 20px;
+  }
+
+  .max-layout {
+    padding: 0 1rem;
+  }
+
+  .section-layout {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .f-header-title,
+  .f-footer-title,
+  .f-heading-small{
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  .f-header-text,
+  .f-footer-text{
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+  }
+
+  .f-footer-strong {
+    font-size: 0.8125rem;
+    line-height: 1.3rem;
+  }
+
+  .f-footer-text2 {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+  }
+
+  .f-72 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+
+  .f-main-title {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    letter-spacing: -0.05rem;
+  }
+
+  .f-main-subtitle {
+    font-size: 0.75rem;
+    line-height: 1.05rem;
+  }
+
+  .f-heading {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .f-cnt_txt {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+
+  .f-cnt_txt2 {
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+
+  .f-h1 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  .f-h2 {
+    font-size: 1.5rem;
+    line-height: 1.95rem;
+  }
+
+  .f-list{
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+  }
+
+  .f-title {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  .f-title1,
+  .f-list2 {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .f-title2 {
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+  }
+
+  .f-body {
+    font-size: 0.8125rem;
+    line-height: 1.3rem;
+  }
+
+  .f-body2 {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+  }
+
+  .f-caption {
+    font-size: 0.625rem;
+    line-height: 0.875rem;
+  }
+}
+
+@screen mobile {
+  body {
+    font-size: 16px;
+  }
+
+  .fade-in-1 {
+    width: 5.0625rem;
+    height: 5.0625rem;
+  }
+
+  .fade-in-2 {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .fade-in-3 {
+    width: 11.25rem;
+    height: 11.25rem;
+  }
+}
+
+
+
+
+
+
+/* Buttons */
+/*.btn,*/
+/*.btn-sm {*/
+/*  @apply font-medium inline-flex items-center justify-center border border-transparent rounded leading-snug transition duration-150 ease-in-out;*/
+/*}*/
+
+/*.btn {*/
+/*  @apply px-8 py-3 shadow-lg;*/
+/*}*/
+
+/*.btn-sm {*/
+/*  @apply px-4 py-2 shadow;*/
+/*}*/
+
+/* Forms */
+/*.form-input,*/
+/*.form-textarea,*/
+/*.form-multiselect,*/
+/*.form-select,*/
+/*.form-checkbox,*/
+/*.form-radio {*/
+/*  @apply bg-white border border-gray-300 focus:border-gray-500;*/
+/*}*/
+
+/*.form-input,*/
+/*.form-textarea,*/
+/*.form-multiselect,*/
+/*.form-select,*/
+/*.form-checkbox {*/
+/*  @apply rounded;*/
+/*}*/
+
+/*.form-input,*/
+/*.form-textarea,*/
+/*.form-multiselect,*/
+/*.form-select {*/
+/*  @apply py-3 px-4;*/
+/*}*/
+
+/*.form-input,*/
+/*.form-textarea {*/
+/*  @apply placeholder-gray-500;*/
+/*}*/
+
+/*.form-select {*/
+/*  @apply pr-10;*/
+/*}*/
+
+/*.form-checkbox,*/
+/*.form-radio {*/
+/*  @apply text-gray-800 rounded-sm;*/
+/*}*/

@@ -1,0 +1,40 @@
+textarea {
+    resize: none !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form button.active {
+    background-color: #2C6DFF;
+}
+
+/* Firefox  */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.applicationForm ul li.active{
+    color: #17181A;
+    border-bottom-color: #B7C7FF;
+}
+
+@screen mobile {
+    .applicationForm ul li{
+        justify-content: center;
+        transition: flex 0.5s ease-in-out;
+    }
+    .applicationForm ul li.active{
+        flex: auto;
+        justify-content: space-between;
+    }
+    .applicationForm ul li img{
+        display: none;
+    }
+    .applicationForm ul li.active img{
+        display: block;
+    }
+}

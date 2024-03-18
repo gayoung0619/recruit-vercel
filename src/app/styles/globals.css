@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "additional-styles/fonts.css";
+@import "additional-styles/utility-patterns.css";
+@import "additional-styles/swiper.css";
+@import "additional-styles/animation.css";
+@import "additional-styles/notice.css";

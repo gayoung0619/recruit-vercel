@@ -1,0 +1,56 @@
+.swiper-container .swiper-pagination {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.swiper-container .swiper-pagination-bullet {
+    display: block;
+    width: 56px;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #9B9B9E;
+}
+
+.swiper-container .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+}
+
+.autoSwiper .swiper-slide{
+    width: 90%;
+}
+
+.gridSwiper,
+.tabSwiper {
+    padding: 0 1rem !important;
+}
+
+.gridSwiper .swiper-slide {
+    width: 17.5rem;
+}
+
+.tabSwiper .swiper-slide {
+    width: auto;
+}
+
+.processSwiper {
+    margin-left: initial !important;
+    margin-right: initial !important;
+}
+
+.processSwiper .swiper-slide {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+@screen mobile {
+    .swiper-container .swiper-pagination {
+        column-gap: 4px;
+    }
+
+    .swiper-container .swiper-pagination-bullet {
+        width: 32px;
+        height: 1px;
+    }
+}
