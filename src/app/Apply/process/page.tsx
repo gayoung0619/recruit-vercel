@@ -22,11 +22,11 @@ const processPage = () => {
 
   return (
       <div>
-        <section className="dark-content relative text-white w-full">
+        <section className="dark-content relative text-white w-full h-[100vh] mobile:h-full">
           <div className="w-full h-full absolute z-[-1]">
             <div className="bg-[url('/images/apply-process.jpg')] bg-cover bg-no-repeat bg-top w-full h-full bg-fixed"></div>
           </div>
-          <div className="max-layout">
+          <div className="max-layout h-full flex flex-col justify-between">
             <div className="flex justify-between items-start mobile:flex-col" >
               <Breadcrumb/>
               <Swiper
@@ -55,7 +55,7 @@ const processPage = () => {
               </Swiper>
             </div>
 
-            <div className="pt-[26.3542vw] pb-[4.1667vw] mobile:pt-[3.1875rem] mobile:pb-[1.25rem]">
+            <div className="pb-[4.1667vw] mobile:pb-[1.25rem] mobile:pt-[3.1875rem]">
               <h2 className="f-h2 circle title-circle">Welcome!</h2>
               <div className="flex justify-between items-end">
                 <h1 className="f-h1 font-bold pt-[0.5729vw] mobile:font-medium">주저 말고 지원하세요</h1>
