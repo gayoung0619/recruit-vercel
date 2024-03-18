@@ -95,7 +95,7 @@ export default function Main() {
                         <Link href='/Apply/notice'>
                           <li className="flex flex-col justify-between h-[10.8854vw] w-[12.1354vw] mobile:h-32 mobile:max-w-[160px] mobile:w-full bg-white/[.24] rounded p-[1.2500vw] mobile:p-[1rem]">
                             <div className="flex justify-between items-center">
-                              <strong className="f-cnt_txt">인턴   채용</strong>
+                              <strong className="f-cnt_txt">어ㅗㄹ어로어로ㅓㅇ로얼</strong>
                               <Arrow/>
                             </div>
                             <p className="text-right f-cnt_txt2">{internItems.length}건</p>
